@@ -24,3 +24,4 @@ scp -rp ~/Desktop/SD13/unit3/resources/rest-project-skeleton myNewProject
 
 * FINALLY!!!! In _JPAProject > META-INF > persistence.xml_ change the database url to the name of your database for your new project (and the username and password if you created a specific user).
 # ActivityTracker
+# EventTracker
