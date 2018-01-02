@@ -1,0 +1,9 @@
+package data;
+
+public class Snippet {
+	INSERT INTO `activity` (id, name, difficulty_level, duration_in_hrs, day) VALUES (1, 'Hiked Mt Evans', 'strenuous', 8.5, 'Monday');
+	INSERT INTO `activity` (id, name, difficulty_level, duration_in_hrs, day) VALUES (2, 'Walking Group', 'easy', 1.0, 'Wednesday');
+	INSERT INTO `activity` (id, name, difficulty_level, duration_in_hrs, day) VALUES (3, 'Hot Yoga', 'moderate', 1.0, 'Thursday');
+	INSERT INTO `activity` (id, name, difficulty_level, duration_in_hrs, day) VALUES (4, 'Climbing Gym', 'moderate', 1.5, 'Saturday');
+}
+

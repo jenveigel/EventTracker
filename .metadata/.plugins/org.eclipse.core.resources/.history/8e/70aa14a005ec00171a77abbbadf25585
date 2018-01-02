@@ -1,0 +1,38 @@
+package controllers;
+
+import java.util.List;
+
+import javax.servlet.http.HttpServletResponse;
+
+import org.springframework.web.bind.annotation.RestController;
+
+import entities.Activity;
+
+@RestController
+public class ActivityController {
+
+	public List<Activity> index(HttpServletResponse res){
+		//to do
+		return null; //return what?
+	}
+	
+	public Activity show(int id, HttpServletResponse res) {
+		//to do
+		return null; //return what?
+	}
+	
+	public Activity create(String ActivityJSON, HttpServletResponse res) {
+		//to do
+		return null; //return what?
+	}
+	
+	public Activity update(int id, String ActivityJSON, HttpServletResponse res) {
+		//to do
+		return null; //return what?
+	}
+	
+	public boolean destroy(int id, HttpServletResponse res) {
+		//to do
+		return false; //return what?
+	}
+}
