@@ -1,0 +1,11 @@
+angular.module('appModule')
+.factory('activityService', function($http){
+	
+	var service = {};
+	
+	var activities = [];
+	
+	
+	
+	return service;
+});

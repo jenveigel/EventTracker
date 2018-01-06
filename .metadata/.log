@@ -1967,3 +1967,313 @@ java.net.UnknownHostException: dist.springsource.com: nodename nor servname prov
 
 !ENTRY org.eclipse.core.jobs 2 2 2018-01-02 09:45:49.763
 !MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdater$6
+!SESSION 2018-01-02 10:34:52.107 -----------------------------------------------
+eclipse.buildId=3.9.1.201710111105-RELEASE-e47
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -keyring /Users/jenveigel/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springsource.sts.ide -product org.springsource.sts.ide -data /Users/jenveigel/SD/eventTracker -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -keyring /Users/jenveigel/.eclipse_keyring
+
+!ENTRY org.eclipse.core.net 1 0 2018-01-02 10:34:57.288
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2018-01-02 10:35:07.263
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2018-01-02 10:35:07.809
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2018-01-02 10:35:09.565
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-01-02 10:35:09.565
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2e6ca6b5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@2c9616bb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2018-01-02 10:35:10.423
+!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
+
+!ENTRY org.eclipse.wst.validation 4 0 2018-01-02 11:22:29.826
+!MESSAGE CHKJ3000E: WAR Validation Failed: java.lang.NullPointerException
+!STACK 0
+org.eclipse.wst.validation.internal.core.ValidationException: CHKJ3000E: WAR Validation Failed: java.lang.NullPointerException
+	at org.eclipse.jst.j2ee.model.internal.validation.WarValidator.validateInJob(WarValidator.java:349)
+	at org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator.validateInJob(UIWarValidator.java:113)
+	at org.eclipse.wst.validation.internal.operations.ValidatorJob.run(ValidatorJob.java:78)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.wst.validation 4 0 2018-01-02 11:22:29.945
+!MESSAGE 
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.jst.j2ee.model.internal.validation.WarValidator.validateErrorPages(WarValidator.java:698)
+	at org.eclipse.jst.j2ee.model.internal.validation.WarValidator.validate(WarValidator.java:255)
+	at org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator.validate(UIWarValidator.java:96)
+	at org.eclipse.jst.j2ee.model.internal.validation.WarValidator.validateInJob(WarValidator.java:335)
+	at org.eclipse.jst.j2ee.internal.web.validation.UIWarValidator.validateInJob(UIWarValidator.java:113)
+	at org.eclipse.wst.validation.internal.operations.ValidatorJob.run(ValidatorJob.java:78)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.lsp4e 1 0 2018-01-02 13:04:35.246
+!MESSAGE Non IFiles not supported yet
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-03 08:59:23.407
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-03 08:59:23.664
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-03 12:59:27.840
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-03 12:59:27.936
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-04 08:29:36.640
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-04 08:29:37.527
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY net.resheim.eclipse.launcher.core 1 0 2018-01-04 16:39:18.754
+!MESSAGE Launching new Eclipse instance with "open -n /Applications/STS.app --args -vm /Library/Java/JavaVirtualMachines/jdk1.8.0_144.jdk/Contents/Home/jre/lib/server/libjvm.dylib -os macosx -ws cocoa -arch x86_64 -showsplash -launcher /Applications/STS.app/Contents/MacOS/STS -name STS --launcher.library /Applications/STS.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher.cocoa.macosx.x86_64_1.1.550.v20170928-1359/eclipse_1629.so -startup /Applications/STS.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar --launcher.overrideVmargs -product org.springsource.sts.ide -launcher /Applications/STS.app/Contents/MacOS/STS -product org.springsource.sts.ide -data /Users/jenveigel/SD/quiz-project -launcher /Applications/STS.app/Contents/MacOS/STS -product org.springsource.sts.ide -launcher /Applications/STS.app/Contents/MacOS/STS -product org.springsource.sts.ide -launcher /Applications/STS.app/Contents/MacOS/STS -product org.springsource.sts.ide -launcher /Applications/STS.app/Contents/MacOS/STS -product org.springsource.sts.ide -keyring /Users/jenveigel/.eclipse_keyring -vmargs -Dosgi.requiredJavaVersion=1.8 -Xms40m -Dosgi.module.lock.timeout=10 -Xverify:none -XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts -Xdock:icon=../Resources/sts.icns -Xmx1200m -Djava.class.path=/Applications/STS.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar -Djava.class.path=/Applications/STS.app/Contents/MacOS//../Eclipse/plugins/org.eclipse.equinox.launcher_1.4.0.v20161219-1356.jar "
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-05 08:22:22.008
+!MESSAGE Connection to https://spring.io/blog.atom failed on spring.io: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: spring.io: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+
+!ENTRY org.eclipse.equinox.p2.transport.ecf 2 0 2018-01-05 08:22:23.708
+!MESSAGE Connection to http://dist.springsource.com/release/STS/doc/updates.xml failed on dist.springsource.com: nodename nor servname provided, or not known. Retry attempt 0 started
+!STACK 0
+java.net.UnknownHostException: dist.springsource.com: nodename nor servname provided, or not known
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:928)
+	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1323)
+	at java.net.InetAddress.getAllByName0(InetAddress.java:1276)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1192)
+	at java.net.InetAddress.getAllByName(InetAddress.java:1126)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.resolveHostname(DefaultClientConnectionOperator.java:262)
+	at org.apache.http.impl.conn.DefaultClientConnectionOperator.openConnection(DefaultClientConnectionOperator.java:161)
+	at org.apache.http.impl.conn.AbstractPoolEntry.open(AbstractPoolEntry.java:144)
+	at org.apache.http.impl.conn.AbstractPooledConnAdapter.open(AbstractPooledConnAdapter.java:134)
+	at org.apache.http.impl.client.DefaultRequestDirector.tryConnect(DefaultRequestDirector.java:612)
+	at org.apache.http.impl.client.DefaultRequestDirector.execute(DefaultRequestDirector.java:447)
+	at org.apache.http.impl.client.AbstractHttpClient.doExecute(AbstractHttpClient.java:884)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:82)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.performConnect(HttpClientRetrieveFileTransfer.java:1084)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer.access$0(HttpClientRetrieveFileTransfer.java:1075)
+	at org.eclipse.ecf.provider.filetransfer.httpclient4.HttpClientRetrieveFileTransfer$1.performFileTransfer(HttpClientRetrieveFileTransfer.java:1071)
+	at org.eclipse.ecf.filetransfer.FileTransferJob.run(FileTransferJob.java:74)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:56)
+!SESSION 2018-01-05 16:20:18.551 -----------------------------------------------
+eclipse.buildId=3.9.1.201710111105-RELEASE-e47
+java.version=1.8.0_144
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -keyring /Users/jenveigel/.eclipse_keyring
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -product org.springsource.sts.ide -keyring /Users/jenveigel/.eclipse_keyring -data /Users/jenveigel/SD/eventTracker
+
+!ENTRY org.eclipse.core.net 1 0 2018-01-05 16:20:25.224
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2018-01-05 16:20:38.962
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY com.genuitec.eclipse.theming.ui 4 0 2018-01-05 16:20:39.601
+!MESSAGE The file resources/css/dark.css Could not be found in bundle org.eclipse.lsp4e
+
+!ENTRY org.eclipse.jface 2 0 2018-01-05 16:20:41.527
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2018-01-05 16:20:41.527
+!MESSAGE A conflict occurred for COMMAND+SHIFT+T:
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5086e144,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(COMMAND+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@557fe039,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui 2 2 2018-01-05 16:20:42.717
+!MESSAGE Invalid preference category path: org.nodeclipse.enide.gradle.preferences.GradlePreferencePage (bundle: org.nodeclipse.enide.editors.gradle, page: org.nodeclipse.enide.editors.gradle.preferences.GradleEditorPreferencePage)
+
+!ENTRY org.eclipse.lsp4e 1 0 2018-01-05 16:23:41.684
+!MESSAGE Non IFiles not supported yet

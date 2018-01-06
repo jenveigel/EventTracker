@@ -69,9 +69,16 @@ public class ActivityDAOImpl implements ActivityDAO {
 	}
 
 	@Override
-	public void destroyActivity(int id) {
+	public boolean destroyActivity(int id) {
 		Activity a = em.find(Activity.class, id);
-		em.remove(a);
+		try {
+			em.remove(a);
+			return true;
+		}
+		catch (Exception e) {
+			return false;
+		}
+		
 	}
 
 }

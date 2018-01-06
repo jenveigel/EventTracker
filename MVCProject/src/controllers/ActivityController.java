@@ -51,8 +51,14 @@ public class ActivityController {
 	}
 	
 	@RequestMapping(path="activity/{id}", method=RequestMethod.DELETE)
-	public void destroy(@PathVariable int id, HttpServletResponse res) {
-		activityDAO.destroyActivity(id);
+	public boolean destroy(@PathVariable int id, HttpServletResponse res) {
+		try {
+			activityDAO.destroyActivity(id);
+			return true;
+		}
+		catch (Exception e){
+			return false;
+		}
 	}
 }
 

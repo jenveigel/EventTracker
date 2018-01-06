@@ -14,6 +14,6 @@ public interface ActivityDAO {
 	
 	public Activity updateActivity(int id, String json);
 	
-	public void destroyActivity(int id);
+	public boolean destroyActivity(int id);
 	
 }
