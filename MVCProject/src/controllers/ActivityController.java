@@ -33,8 +33,8 @@ public class ActivityController {
 	}
 	
 	@RequestMapping(path="activity", method=RequestMethod.POST)
-	public Activity create(@RequestBody String ActivityJSON, HttpServletResponse res) {
-		Activity a = activityDAO.addNewActivity(ActivityJSON);
+	public Activity create(@RequestBody String activityJSON, HttpServletResponse res) {
+		Activity a = activityDAO.addNewActivity(activityJSON);
 		if (a == null) {
 			res.setStatus(400);
 		}
