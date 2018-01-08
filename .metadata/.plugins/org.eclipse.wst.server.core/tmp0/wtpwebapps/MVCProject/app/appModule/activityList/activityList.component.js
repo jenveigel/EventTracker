@@ -23,6 +23,9 @@ angular.module('appModule')
 			 
 			vm.addActivity = function(activity) {
 				var copy = angular.copy(activity);
+				copy.level = '';
+				copy.duration = 0;
+				copy.day = '';
 				activityService.create(copy)
 				.then(function(response) {
 					reload();
@@ -37,6 +40,13 @@ angular.module('appModule')
 				});
 				vm.selected = activity;
 				vm.editActivity = null;
+			}
+			
+			vm.deleteActivity = function(id) {
+				activityService.destroy(id)
+				.then(function(response) {
+					reload();
+				});
 			}
 			
 			vm.displayActivity = function(activity) {
@@ -58,7 +68,6 @@ angular.module('appModule')
 			vm.totalHours = function(activity) {
 				var total = 0;
 				for (var i = 0; i < vm.activities.length; i++) {
-					
 					total += vm.activities[i].duration; 
 				}
 				return total;

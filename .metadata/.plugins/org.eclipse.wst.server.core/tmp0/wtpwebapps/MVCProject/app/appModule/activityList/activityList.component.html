@@ -21,7 +21,12 @@
 <div ng-show="vm.editActivity">
 	<form class="edit-form">
 		Activity Name: <input type="text" ng-model="vm.editActivity.name" placeholder="Activity"/></br>
-		Level: <input type="text" ng-model="vm.editActiviy.level" placeholder="Level of Difficulty"/></br>
+		Level: <input type="radio" ng-model="vm.editActivity.level" name="level" value="Easy"/>Easy
+		 	<input type="radio" ng-model="vm.editActivity.level" name="level" value="Moderate"/>Moderate
+		 	<input type="radio" ng-model="vm.editActivity.level" name="level" value="Strenuous"/>Strenuous</br>
+		
+		Duration (in hours): <input type="number" step="0.1" ng-model="vm.editActivity.duration" placeholder="Total Hours"/></br>
+		Day: <input type="text" ng-model="vm.editActivity.day" placeholder="Day"/></br>
 	</form>
 	
 	<button type="button" ng-click="vm.updateActivity(vm.editActivity)">Save</button>
@@ -32,7 +37,7 @@
 
 <!-- ADD ACTIVITY FORM -->
 <form ng-show="!vm.selected">
-	<input type="text" ng-model="activity.name" placeholder="Activity Name"/><br/>
+	<input type="text" ng-model="activity.name" placeholder="Activity Name"/>
 	<input type="submit" ng-click="vm.addActivity(activity); activity = {}" value="ADD"/>
 </form>
 <br/>
@@ -41,6 +46,7 @@
 <div ng-show="!vm.selected">
 <div ng-repeat="activity in vm.activities">
 	<div ng-click=vm.displayActivity(activity)>{{activity.name}}</div>
+	<button class="delete" ng-click="vm.deleteActivity(activity.id)">x</button>
 	<br/>
 </div>
 </div>
