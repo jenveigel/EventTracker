@@ -53,24 +53,26 @@ public class ActivityDAOImpl implements ActivityDAO {
 	@Override
 	public Activity updateActivity(int id, String json) {
 		ObjectMapper mapper = new ObjectMapper();
+		Activity a = null;
+		Activity ogActivity = null;
 		try {
-			Activity a = mapper.readValue(json, Activity.class);
-			Activity updatedActivity = em.find(Activity.class, id);
-			updatedActivity.setName(a.getName());
-			updatedActivity.setLevel(a.getLevel());
-			updatedActivity.setDuration(a.getDuration());
-			updatedActivity.setDay(a.getDay());
-			em.persist(updatedActivity);
-			return updatedActivity;
+			a = mapper.readValue(json, Activity.class);
+			ogActivity = em.find(Activity.class, id);
+			ogActivity.setName(a.getName());
+			ogActivity.setLevel(a.getLevel());
+			ogActivity.setDuration(a.getDuration());
+			ogActivity.setDay(a.getDay());
+//			em.persist(ogActivity);
+//			return ogActivity;
 		}
 		catch(Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return ogActivity;
 	}
 
 	@Override
-	public boolean destroyActivity(int id) {
+	public Boolean destroyActivity(int id) {
 		Activity a = em.find(Activity.class, id);
 		try {
 			em.remove(a);

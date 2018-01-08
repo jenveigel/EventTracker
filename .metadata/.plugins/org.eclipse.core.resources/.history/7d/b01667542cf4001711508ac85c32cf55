@@ -1,0 +1,39 @@
+<h1>Weekly Activity Tracker</h1>
+
+<!-- DISPLAY DETAILED VIEW OF SELECTED ACTIVITY -->
+<div ng-show="vm.selected && !vm.editActivity"> 
+	<h1>Activity Details</h1>
+	<div>Activity Name: {{vm.selected.name}}</div><br/>
+	<div>Level: {{vm.selected.level}}</div><br/>
+		<!-- 	<div>Duration (in hours): {{vm.selected.duration}}</div><br/>
+				<div>Day: {{vm.selected.day}}</div><br/> -->
+	<div><input type="submit" ng-click="vm.setEditActivity()" value="Edit"/></div>
+	<br/>
+	<button type="button" ng-click="vm.displayActivities()">Go Back</button>
+</div>
+
+<!-- SHOW EDIT VIEW -->
+<div ng-show="vm.editActivity">
+	<form class="edit-form">
+		Activity Name: <input type="text" ng-model="vm.editActivity.name" placeholder="Activity"/></br>
+		Level: <input type="text" ng-model="vm.editActiviy.level" placeholder="Level of Difficulty"/></br>
+	</form>
+</div>
+
+
+<!-- ADD ACTIVITY FORM -->
+<form ng-show="!vm.selected">
+	<input type="text" ng-model="activity.name" placeholder="Activity Name"/><br/>
+	<input type="submit" ng-click="vm.addActivity(activity); activity = {}" value="ADD"/>
+</form>
+<br/>
+
+<!-- DISPLAY LIST OF ACTIVITIES -->
+<div ng-show="!vm.selected">
+<div ng-repeat="activity in vm.activities">
+	<div ng-click=vm.displayActivity(activity)>{{activity.name}}</div>
+	<br/>
+</div>
+</div>
+
+	

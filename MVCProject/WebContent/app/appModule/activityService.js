@@ -24,9 +24,23 @@ angular.module('appModule')
 	}
 	
 	
-//	create
-//	update
-//	destroy
+	service.update = function(activity) {
+		return $http({
+			method : 'PUT',
+			url : 'rest/activity/' + activity.id,
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+			data : activity
+		});
+	}
+
+	service.destroy = function(id) {
+		return $http({
+			method : 'DELETE',
+			url : 'rest/activity/' + id
+		});
+	}
 	
 	
 	return service;

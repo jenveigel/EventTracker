@@ -1,0 +1,47 @@
+angular.module('appModule')
+.component('activityList', {
+	templateUrl : "app/appModule/activityList/activityList.component.html",
+		controller : function(activityService) {
+			var vm = this;
+			
+			vm.activities = [];
+			
+			vm.selected = null;
+//			
+//			vm.editActivity = null;
+			
+			var reload = function() {
+				activityService.index()
+				.then(function(response){
+					console.log(response);
+					vm.activities = response.data;
+				});
+			}
+			
+			reload();
+			
+			 
+			vm.addActivity = function(activity) {
+				var copy = angular.copy(activity);
+				activityService.create(copy)
+				.then(function(response) {
+					reload();
+				});
+			}
+ 
+			vm.editActivity = function(activity) {
+				activityService.update(activity)
+				.then(function(response){
+					reload();
+				});
+				vm.selected = activity;
+				//vm.editActivity = null;
+			}
+			
+			
+//			updateActivity
+//			deleteActivity
+			
+		},
+	controllerAs : 'vm'
+});
