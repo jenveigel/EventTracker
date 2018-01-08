@@ -9,10 +9,21 @@ angular.module('appModule')
 		return $http({
 			method : 'GET',
 			url : 'rest/activity'
-		})
+		});
 	}
 	
-//	index
+	service.create = function(activity) {
+		return $http({
+			method : 'POST',
+			url : 'rest/activity',
+			headers : {
+				'Content-Type' : 'application/json'
+			},
+			data : activity
+		});
+	}
+	
+	
 //	create
 //	update
 //	destroy

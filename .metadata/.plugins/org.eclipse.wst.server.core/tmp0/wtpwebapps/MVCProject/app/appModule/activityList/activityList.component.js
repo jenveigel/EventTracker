@@ -16,8 +16,15 @@ angular.module('appModule')
 			
 			reload();
 			
-
-//			addActivity
+			 
+			vm.addActivity = function(activity) {
+				var copy = angular.copy(activity);
+				activityService.create(copy)
+				.then(function(response) {
+					reload();
+				});
+			}
+ 
 //			updateActivity
 //			deleteActivity
 			

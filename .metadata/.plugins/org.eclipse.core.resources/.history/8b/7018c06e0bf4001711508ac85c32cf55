@@ -37,9 +37,8 @@ public class ActivityDAOImpl implements ActivityDAO {
 	@Override
 	public Activity addNewActivity(String json) {
 		ObjectMapper mapper = new ObjectMapper();
-		Activity newActivity = null;
 		try {
-			newActivity = mapper.readValue(json, Activity.class);
+			Activity newActivity = mapper.readValue(json, Activity.class);
 			em.persist(newActivity);
 			em.flush();
 			return newActivity;

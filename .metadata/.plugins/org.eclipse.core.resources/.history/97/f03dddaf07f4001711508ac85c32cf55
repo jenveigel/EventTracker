@@ -1,0 +1,7 @@
+<h1>Activity Tracker</h1>
+
+<div ng-repeat="activity in vm.activities">
+
+		<div>{{activity.name}}</div><br/>
+	
+	</div>

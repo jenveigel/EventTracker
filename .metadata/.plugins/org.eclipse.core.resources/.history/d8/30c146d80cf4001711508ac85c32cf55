@@ -12,7 +12,7 @@ angular.module('appModule')
 		});
 	}
 	
-	service.create = function(activity) {
+	service.create = function() {
 		return $http({
 			method : 'POST',
 			url : 'rest/activity',
