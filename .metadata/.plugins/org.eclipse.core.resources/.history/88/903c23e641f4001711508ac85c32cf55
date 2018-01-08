@@ -3,10 +3,10 @@
 <!-- DISPLAY DETAILED VIEW OF SELECTED ACTIVITY -->
 <div ng-show="vm.selected && !vm.editActivity"> 
 	<h2>Activity Details</h2>
-	<div>Activity Name: <strong>{{vm.selected.name}}</strong></div><br/>
-	<div>Level: <strong>{{vm.selected.level}}</strong></div><br/>
-	<div>Duration (in hours): <strong>{{vm.selected.duration}}</strong></div><br/>
-	<div>Day: <strong>{{vm.selected.day}}</strong></div><br/>
+	<div><strong>Activity Name:</strong> {{vm.selected.name}}</div><br/>
+	<div><strong>Level: </strong>{{vm.selected.level}}</div><br/>
+	<div><strong>Duration (in hours): </strong>{{vm.selected.duration}}</div><br/>
+	<div><strong>Day: </strong>{{vm.selected.day}}</div><br/>
 	<div><input type="submit" ng-click="vm.setEditActivity()" value="Edit"/></div>
 	<br/>
 	<button type="button" ng-click="vm.displayActivities()">Go Back</button>
@@ -47,11 +47,9 @@
 
 	<!-- DISPLAY LIST OF ACTIVITIES -->
 	<div ng-repeat="activity in vm.activities">
-	<p>
-		<h3 ng-click=vm.displayActivity(activity)>{{activity.name}}</h3>
-		<button class="delete" ng-click="vm.deleteActivity(activity.id)">Delete</button>
+		<div ng-click=vm.displayActivity(activity)>{{activity.name}}</div>
+		<button class="delete" ng-click="vm.deleteActivity(activity.id)">x</button>
 		<br/>
-	</p>
 	</div>
 	
 </div>

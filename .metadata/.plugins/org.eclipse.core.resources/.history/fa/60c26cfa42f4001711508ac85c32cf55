@@ -1,0 +1,9 @@
+body {
+	color: #16a085;
+	background-color: #ecf0f1;
+	text-align: center;
+}
+
+strong {
+	color: #8e44ad;
+}

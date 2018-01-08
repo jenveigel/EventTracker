@@ -49,7 +49,7 @@
 	<div ng-repeat="activity in vm.activities">
 	<p>
 		<h3 ng-click=vm.displayActivity(activity)>{{activity.name}}</h3>
-		<button class="delete" ng-click="vm.deleteActivity(activity.id)">Delete</button>
+		<button class="delete" ng-click="vm.deleteActivity(activity.id)">x</button>
 		<br/>
 	</p>
 	</div>
